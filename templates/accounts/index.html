@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to Django Class</h1>
+    <h1>Welcome to Django Class, {{userName}}</h1>
+    <ul>
+        {% for course in courses  %}
+        <li>{{course}}</li>
+        {% endfor %}
+
+    </ul>
+
+    <h2>Profile</h2>
+    <p> {{profile.name}}</p>
+    <p>{{profile.course}}</p>
+    <p> {{profile.gender}} </p>
+
+
+    {% if profile.active %}
+        <p>Active</p>
+    {% else %}
+        <p>Inactive</p>
+    {% endif %}
+ 
 </body>
 </html>
